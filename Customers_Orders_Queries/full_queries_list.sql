@@ -57,7 +57,6 @@ from co.order_items oi
 group by order_id
 order by sum((oi.unit_price*oi.quantity)) desc;
 
-
 -- Total for each order with store name
 select s.store_name, oi.order_id, sum((oi.unit_price*oi.quantity)) as order_total
 from co.order_items oi

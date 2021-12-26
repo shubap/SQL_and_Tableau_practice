@@ -85,7 +85,7 @@ group by oi.order_id, s.store_name) x
 group by store_name
 order by avg_order_total desc;
 
--- Max sale amount from each store using 'with' clause
+-- Max sale amount from each store using 'with' clause, shows associated order ID of the max sale amount 
 with x as
 (select s.store_name, oi.order_id, sum((oi.unit_price*oi.quantity)) as order_total
 from co.order_items oi
